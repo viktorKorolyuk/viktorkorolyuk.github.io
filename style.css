@@ -7,6 +7,15 @@
     }
 }
 
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 body {
     background: #fff;
     font-family: sans-serif;
@@ -20,9 +29,15 @@ a {
     color: #eee;
 }
 
+.a {
+    /**cause its annoying and not needed */
+    text-decoration: underline;
+    color: #1486cc;
+}
+
 .github {
     position: absolute;
-    right: 1em;
+    right: 0em;
     width: 2em;
     margin: 3px;
 }
@@ -30,6 +45,20 @@ a {
 .title {
     color: #eee;
     text-align: center;
+    /* Making sure that people do not accidentaly select the nav bar */
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 .title .logo.circle,
@@ -46,11 +75,13 @@ a {
 .button:hover {
     background: #333;
 }
- .logo.circle:hover {
-    animation-name: spasm; 
-	animation-duration: 5s; /* 3 seconds */
-	animation-iteration-count: 1; 
-	animation-timing-function: ease-in-out;
+
+.logo.circle:hover {
+    animation-name: spasm;
+    animation-duration: 5s;
+    /* 3 seconds */
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
 }
 
 .title .logo.circle {
@@ -65,11 +96,41 @@ a {
     width: 6em;
     height: 6em;
     line-height: 6em;
-    font-size:1.3em;
+    font-size: 1.3em;
     margin: 0em 04em;
 }
 
 #main {
-    margin: 3em 5em 0em 4em;
-    color:#333;
+    margin: 3em 5em 0em 1em;
+    color: #333;
+}
+
+#main * {
+    opacity: 0;
+}
+
+.gallery {
+    display: inline-block;
+    background-color: #333;
+    height: 150px;
+    width: 400px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0em;
+    margin: 1em;
+    text-align: center;
+    background-size: cover;
+}
+
+.gallery p {
+    margin: 0;
+    background: rgba(3, 3, 3, 0.7);
+    width: 100%;
+    height: 100%;
+    line-height: 100px;
+    transition: background 1s;
+}
+
+.gallery p:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.5);
 }

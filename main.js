@@ -1,42 +1,69 @@
-/** Now its time for the "fun" part */
-var buttons = document.getElementsByClassName("button");
-var x;
+/* Now its time for the "fun" part
+ * In the following code we will make a system that simplifies debugging and
+ * adding features later on.
+ */
 const possibilities = {
-    "about" : `<h1>Lorum ipsum dolor:</h1>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet, eros at efficitur rutrum, ligula purus sollicitudin mi, congue egestas libero nisi sed sem. Curabitur suscipit mi a nisl aliquet vestibulum. In hac habitasse platea dictumst. Nulla vulputate non neque nec laoreet. Donec vehicula ante ut mauris luctus, eget venenatis mi tempor. Vivamus a tellus tempus arcu cursus accumsan ac at justo. Aliquam nec augue euismod, viverra ligula et, cursus diam. Donec mattis dui arcu, malesuada tincidunt lacus ultrices a. Aenean maximus et turpis at viverra. Aliquam luctus felis est, id egestas lectus ullamcorper at. Integer diam quam, dictum ac sapien semper, fermentum fermentum turpis. Fusce condimentum orci vitae orci imperdiet, sed vehicula nunc mattis. Vestibulum purus risus, vulputate vel maximus nec, eleifend at leo. In gravida lorem vel lacinia hendrerit.
-
-Aliquam egestas ac ligula ut laoreet. Donec eget laoreet ex. Aliquam vitae lorem mollis, efficitur urna tristique, consequat lacus. Fusce pharetra metus velit, congue fermentum orci aliquet a. Aenean at luctus diam. Maecenas porta mollis dolor, ac interdum mi faucibus in. Donec ut bibendum ante, at elementum massa. Phasellus a fermentum nunc. Vivamus eget ligula et odio accumsan semper ac ac felis. Nullam augue nisl, vulputate at congue a, malesuada eget orci. Vivamus et leo ut nisi convallis pellentesque at quis elit. Maecenas quis justo nec nisi scelerisque elementum. Ut mollis augue nec mi tempor efficitur et id massa. Sed sit amet ipsum cursus, rhoncus mi ac, feugiat enim. Vestibulum luctus metus vitae porta maximus. Integer elit enim, porta sit amet aliquam vitae, cursus tempus neque. Curabitur posuere id eros ut posuere. Donec consectetur convallis odio, eget rhoncus mauris dignissim ut. Nam sed augue cursus, luctus eros in, aliquam magna. Duis rutrum venenatis placerat. Curabitur vestibulum interdum ex, sed condimentum ipsum cursus id. Aenean scelerisque porta tincidunt.`,
-    "gallery" : ``
+    before: `<style>
+#main *{
+   animation: fadein 2s; /* Why not add some effects? */
+   opacity: 1;
 }
-for(var i = 0; i < buttons.length; i++){
-    console.log(i);
-    buttons[i].onclick = function(e){
-        console.log(e.target.id);
-        x = e;
-        document.getElementById("main").innerHTML = possibilities[x];
+</style>`,
+    about: function () {
+        return document.getElementById("about-template").innerHTML;
+    },
+    gallery: function () {
+        return  "<h1>My projects</h1>"+ loadGallery();
+    }
+}
+const images = [{
+    name: "viktorkorolyuk.github.io",
+    desc: "My main webpage",
+    url: "https://viktorkorolyuk.github.io",
+    img: "viktorkorolyuk.github.io.png" //<-- define this
+}, {
+    name: "viktorkorolyuk.cu.cc",
+    desc: "A webpage made in 2015 as a porfolio",
+    url: "http://viktorkorolyuk.cu.cc",
+    img: "viktorkorolyuk.cu.cc.png"
+}, {
+    name: "SWipe",
+    desc:"Are you fast enough?",
+    url: "https://viktorkorolyuk.github.io/SWipe/",
+    img: "SWipe-game.png"
+}, {
+    name: "jstoolbox",
+    desc:"Tools to optimise your chromebook usage",
+    url: "https://viktorkorolyuk.github.io/jstoolbox/",
+    img: "jstoolbox.png"
+}];
+
+var buttons = document.getElementsByClassName("button");
+
+
+
+/* Create an "INIT" subroutine to aid in later development and debugging */
+function init() {
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = function (e) {
+            document.getElementById("main").innerHTML = `${possibilities[e.target.target]()} ${possibilities.before}`; //set the divider by id tag "main" to a set html code defined in possibilities
+        }
     }
 }
 
-// Create a class for the element
-class XProduct extends HTMLElement {
-  constructor() {
-    // Always call super first in constructor
-    super();
+/* Gallery */
+function loadGallery() {
+    let main = document.getElementById("main");
+    let str = "";
+    for (i in images) {
+        //Set the the content
+        str += `<div class="gallery" style="background-image:url('res/gallery/${images[i].img}')" onclick="window.location.href='${images[i].url}'">
+        <p onmouseover="this.innerHTML = '${images[i].desc}'" onmouseout="this.innerHTML = '${images[i].name}'">${images[i].name}</p>
+    </div>`;
 
-    // Create a shadow root
-    var shadow = this.attachShadow({mode: 'open'});
-
-    // Create a standard img element and set it's attributes.
-    var img = document.createElement('img');
-      img.src = "https://secure.gravatar.com/avatar/d0d90148e08e3b64ccf75c46f31442c5?s=34&r=pg&d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png"
-    img.width = '150';
-    img.height = '150';
-    img.className = 'product-img';
-
-    // Add the image to the shadow root.
-    shadow.appendChild(img);
-  }
+    }
+    return str;
 }
 
-// Define the new element
-customElements.define('g-hg', XProduct);
+
+init(); //start
