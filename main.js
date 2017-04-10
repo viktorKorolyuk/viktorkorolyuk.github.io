@@ -1,10 +1,12 @@
 /* Now its time for the "fun" part
  * In the following code we will make a system that simplifies debugging and
  * adding features later on.
+ *
+ *I am using a custom page handler to organize the code as much as possible.
  */
-const pgHandle = new pageHandler();
 
-pgHandle.possibilities = {
+
+setPossibilities({
     before: `<style>
 #main *{
    animation: fadein 2s; /* Why not add some effects? */
@@ -17,13 +19,13 @@ pgHandle.possibilities = {
     gallery: function () {
         return "<h1>My projects</h1>" + loadGallery();
     }
-};
+});
 
-pgHandle.pages = [{
+setGallery([{
     name: "viktorkorolyuk.github.io",
     desc: "My main webpage",
     url: "https://viktorkorolyuk.github.io",
-    img: "viktorkorolyuk.github.io.png" //<-- define this
+    img: "viktorkorolyuk.github.io.png"
 }, {
     name: "viktorkorolyuk.cu.cc",
     desc: "A webpage made in 2015 as a porfolio",
@@ -39,14 +41,14 @@ pgHandle.pages = [{
     desc: "Tools to optimise your chromebook usage",
     url: "https://viktorkorolyuk.github.io/jstoolbox/",
     img: "jstoolbox.png"
-}];
+}]);
 
 /* Gallery */
 
 function loadGallery() {
     let main = document.getElementById("main");
     let str = "";
-    let pages = pgHandle.pages;
+    let pages = pgHandler.gallery;
     for (i in pages) {
         //Set the the content
         str += `<div class="gallery" style="background-image:url('res/gallery/${pages[i].img}')" onclick="window.location.href='${pages[i].url}'">
@@ -58,4 +60,4 @@ function loadGallery() {
 }
 
 
-pgHandle.init(); //start
+pgHandler.init(); //start

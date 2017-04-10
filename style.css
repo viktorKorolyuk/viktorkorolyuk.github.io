@@ -6,14 +6,13 @@
         opacity: 1;
     }
 }
+
 body {
     background: #fff;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
-
-
 
 .github {
     position: absolute;
@@ -43,23 +42,21 @@ body {
 .title .logo.circle,
 .button {
     display: inline-block;
-    background: #1486CC;
-    border-radius: 50%;
+    background: #f06464;
+    border-radius: 30%;
     text-align: center;
     color: #eee;
     margin: auto;
     transition: background 0.5s;
+    margin-top: 0.5em;
 }
-
 
 .logo.circle {
-    width: 8em;
-    height: 8em;
-    line-height: 6em;
-    font-size: 3em;
-}
-.logo.circle:hover {
-    background: #333;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    line-height: 2em;
+    font-size: 5em;
 }
 
 .button {
@@ -68,8 +65,13 @@ body {
     line-height: 5em;
     font-size: 2em;
 }
+
+.logo.circle:hover {
+    background: #555;
+}
+
 .button:hover {
-    background: #333;
+    background: #444;
 }
 
 #main {
@@ -93,7 +95,7 @@ body {
     margin: 0.1em;
     text-align: center;
     background-size: cover;
-
+    border-radius: 1em;
 }
 
 .gallery p {
@@ -104,6 +106,7 @@ body {
     height: 100%;
     line-height: 7em;
     transition: background 1s;
+    border-radius: 1em;
 }
 
 .gallery p:hover {
