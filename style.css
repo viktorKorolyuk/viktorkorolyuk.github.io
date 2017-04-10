@@ -42,7 +42,7 @@ body {
 .title .logo.circle,
 .button {
     display: inline-block;
-    background: #f06464;
+    background: #ff6666;
     border-radius: 30%;
     text-align: center;
     color: #eee;
@@ -67,7 +67,8 @@ body {
 }
 
 .logo.circle:hover {
-    background: #555;
+    background-image: url(res/imgs/skull-EXTRACT-pink.png);
+    color:white;
 }
 
 .button:hover {

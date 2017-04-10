@@ -17,7 +17,7 @@ function pageHandler() {
 }
 //global functions
 function setPage(location, id) {
-    if(document.getElementById("main").innerHTML === `${location} ${pgHandler.possibilities.before}`) return;
+    if (document.getElementById("main").innerHTML === `${location} ${pgHandler.possibilities.before}`) return;
 
     document.getElementById("main").innerHTML = `${location} ${pgHandler.possibilities.before}`;
     window.location.hash = id;
