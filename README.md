@@ -1,1 +1,3 @@
-## Playing around with jekyl
+# My main website... for now #
+Who knows when I will find an alternative way to host static websites...
+<br>It's all a big mystery
