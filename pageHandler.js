@@ -17,6 +17,7 @@ function pageHandler() {
 }
 //global functions
 function setPage(location, id) {
+    //return if same page loaded
     if (document.getElementById("main").innerHTML === `${location} ${pgHandler.possibilities.before}`) return;
 
     document.getElementById("main").innerHTML = `${location} ${pgHandler.possibilities.before}`;

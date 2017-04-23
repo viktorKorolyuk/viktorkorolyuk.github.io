@@ -44,7 +44,6 @@ setGallery([{
 }]);
 
 /* Gallery */
-
 function loadGallery() {
     let main = document.getElementById("main");
     let str = "";
