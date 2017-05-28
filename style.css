@@ -1,116 +1,131 @@
 @keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-    background: #fff;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+  background: #fff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .github {
-    position: absolute;
-    right: 0em;
-    width: 2em;
-    margin: 3px;
+  position: absolute;
+  right: 0em;
+  width: 2em;
+  margin: 3px;
 }
 
 .title {
-    color: #eee;
-    text-align: center;
-    /* Making sure that people do not accidentaly select the nav bar */
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Safari */
-    -khtml-user-select: none;
-    /* Konqueror HTML */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-    /* Non-prefixed version, currently supported by Chrome and Opera */
+  color: #eee;
+  text-align: center;
+  /* Making sure that people do not accidentaly select the nav bar */
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
-.title .logo,
-.button {
-    display: inline-block;
-    border-radius: 0%;
-    text-align: center;
-    color: #eee;
-    margin: auto;
-    transition: background 0.5s;
-    margin-top: 0.5em;
+.menu{
+  background: #555;
+}
+
+.logo, .button {
+  padding: 2em;
+  margin: 0;
 }
 
 .logo {
-    background: #333;
-    display: inline-block;
-    width: 4em;
-    height: 4em;
-    line-height: 2em;
-    font-size: 5em;
+  font-size: 1em;
+  background: #333;
+}
+
+.logo #layer1 {
+  fill: white;
+}
+
+.logo #layer2 {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.logo:hover #layer1 {
+  fill: none;
+}
+
+.logo:hover #layer2 {
+  opacity: 1;
 }
 
 .button {
-    background: #ff6666;
-    width: 5em;
-    height: 5em;
-    line-height: 5em;
-    font-size: 2em;
-}
-
-.logo:hover {
-    background-image: url(res/imgs/skull-EXTRACT-333.png);
-    color: white;
+  margin: 0;
+  display: inline-block;
+  background: #555;
+  text-align: center;
+  font-size: 2.5vh;
+  color: #eee;
+  width: 49.99%; /* HACK: Divides screen into two parts. Simple solution, but I am looking in using a more accurate approach. */
+  transition: background .5s;
 }
 
 .button:hover {
-    background: #444;
+  background: #444;
+  color: white;
 }
 
 #main {
-    margin: 2em 15% 0 15%;
-    color: #333;
+  margin: 2em 15% 2em 15%;
+  color: #333;
 }
 
 #main * {
-    opacity: 1;
+  opacity: 1;
 }
+.gallery h1{
 
+}
 .gallery {
-    display: inline-block;
-    background-color: #333;
-    height: 15%;
-    width: 100%;
-    color: rgba(255, 255, 255, 0.7);
-    padding: 0em;
-    margin: 0.1em;
-    text-align: center;
-    background-size: cover;
-    border-radius: .1em;
-    font-size: 250%;
+  display: block;
+  padding: 0em;
+  margin: 0.1em;
+  height: 15vh;
+  width: 50vh;
+  background-color: #333;
+  background-size: cover;
+  text-align: center;
+  font-size: 3vh;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .gallery p {
-    font-size: 0.7em;
-    margin: 0;
-    background: rgba(3, 3, 3, 0.7);
-    width: 100%;
-    height: 100%;
-    line-height: 7em;
-    transition: background 1s;
-    border-radius: .1em;
+
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 3, 3, 0.7);
+  font-size: 0.7em;
+  line-height: 7em;
+  transition: background 1s;
 }
 
 .gallery p:hover {
-    background: rgba(0, 0, 0, 0.8);
-    color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.5);
 }

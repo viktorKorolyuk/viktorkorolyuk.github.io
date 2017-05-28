@@ -23,7 +23,7 @@ setPossibilities({
 
 setGallery([{
     name: "viktorkorolyuk.github.io",
-    desc: "My main webpage",
+    desc: "this webpage",
     url: "https://viktorkorolyuk.github.io",
     img: "viktorkorolyuk.github.io.png"
 }, {
@@ -41,6 +41,11 @@ setGallery([{
     desc: "Tools to optimise your chromebook usage",
     url: "https://viktorkorolyuk.github.io/jstoolbox/",
     img: "jstoolbox.png"
+},{
+  name:"SVG skull",
+  desc: "Polyart skull recreated using SVG",
+  url:"https://codepen.io/ViktorKorolyuk/full/EmMrVb/",
+  img:"svgSkull.png"
 }]);
 
 /* Gallery */
