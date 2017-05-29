@@ -14,7 +14,8 @@ setPossibilities({
 }
 </style>`,
     about: function () {
-        return document.getElementById("about-template").innerHTML;
+      console.log(document.body.innerHTML);
+      return document.getElementById("about-template").innerHTML;
     },
     gallery: function () {
         return "<h1>My projects</h1>" + loadGallery();
@@ -26,11 +27,6 @@ setGallery([{
     desc: "this webpage",
     url: "https://viktorkorolyuk.github.io",
     img: "viktorkorolyuk.github.io.png"
-}, {
-    name: "viktorkorolyuk.cu.cc",
-    desc: "A webpage made in 2015 as a porfolio",
-    url: "http://viktorkorolyuk.cu.cc",
-    img: "viktorkorolyuk.cu.cc.png"
 }, {
     name: "SWipe",
     desc: "Are you fast enough?",
@@ -53,15 +49,16 @@ function loadGallery() {
     let main = document.getElementById("main");
     let str = "";
     let pages = pgHandler.gallery;
+    var x, z = "none";
     for (i in pages) {
+      x = (x == "left") ? "right" : "left";
         //Set the the content
-        str += `<div class="gallery" style="background-image:url('res/gallery/${pages[i].img}')" onclick="window.location.href='${pages[i].url}'">
+        str += `<div class="gallery" style="background-image:url('res/gallery/${pages[i].img}'); float: ${x};" onclick="window.location.href='${pages[i].url}'">
         <p onmouseover="this.innerHTML = '${pages[i].desc}'" onmouseout="this.innerHTML = '${pages[i].name}'">${pages[i].name}</p>
     </div>`;
 
     }
     return str;
 }
-
 
 pgHandler.init(); //start

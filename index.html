@@ -4,22 +4,14 @@
   <title>Viktor Korolyuk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="pageHandler.js"></script>
 </head>
 
 <body>
-  <img
-    src="./res/GitHub-Mark/PNG/GitHub-Mark-Light-120px-plus.png"
-    class="github"
-    onclick="window.location.href = 'https://www.github.com/viktorkorolyuk/'"/>
-  <div
-    id="1"
-    class="title">
+  <img src="./res/GitHub-Mark/PNG/GitHub-Mark-Light-120px-plus.png" class="github" onclick="window.location.href = 'https://www.github.com/viktorkorolyuk/'" />
+  <div id="1" class="title">
     <center>
-    <svg
+      <svg
       class="logo"
-      width="100%"
-      height="300"
       viewBox="0 0 600 600"
       preserveAspectRatio="xMidYMid meet"
       style="background: #444;">
@@ -449,25 +441,27 @@
            style="fill:#303030" />
       </g>
     </svg>
-  </center>
-  <div class="menu">
-    <a class="button" id="gallery" target="gallery">Gallery</a><a class="button" id="about" target="about">About</a>
-  </div>
+    </center>
+    <div class="menu">
+      <a class="button" id="gallery" target="gallery">Gallery</a><a class="button" id="about" target="about">About</a>
+    </div>
   </div>
 
   <center>
     <div id="main">
     </div>
   </center>
-  <script src="main.js"></script>
 
   <!-- Template for ABOUT section -->
-  <template id="about-template">
+  <template class="abouttemplate" id="about-template">
         <h1>Intro</h1>
-        <p style="text-align:left; font-size:20pt;">Salutations from the far reaches of the Internet. My name is Viktor Korolyuk and I am a developer.
-          <h1>Why</h1>
-          <p>Calling ones-self a developer is a tricky task, as the term is interpreted differently based on context.</p>
+        <p>Salutations from the far reaches of the Internet. My name is Viktor Korolyuk and I am a developer.
+        <p>Calling ones-self a developer is a tricky task, as the term is interpreted differently based on context.</p>
     </template>
+
+    <!-- Instead of adding an onload script, this is simply waiting for the document to load before it starts manipulating it. -->
+    <script src="pageHandler.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

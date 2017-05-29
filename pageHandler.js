@@ -12,14 +12,16 @@ function pageHandler() {
                 setPage(pgHandler.possibilities[e.target.target](), e.target.target); //set the divider by id tag "main" to a set html code defined in possibilities
             }
         }
+        //runs every page reload
         if (window.location.hash != "") setPage(this.possibilities[window.location.hash.split("#")[1]](), window.location.hash.split("#")[1]);
     }
 }
-//global functions
+
+//global subroutines for setup. This can be integrated into the pageHandler object later on.
 function setPage(location, id) {
+//    console.log(location);
     //return if same page loaded
     if (document.getElementById("main").innerHTML === `${location} ${pgHandler.possibilities.before}`) return;
-
     document.getElementById("main").innerHTML = `${location} ${pgHandler.possibilities.before}`;
     window.location.hash = id;
 }
