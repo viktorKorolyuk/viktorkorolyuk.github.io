@@ -24,7 +24,7 @@ setPossibilities({
 
 setGallery([{
     name: "viktorkorolyuk.github.io",
-    desc: "this webpage",
+    desc: "The current website.",
     url: "https://viktorkorolyuk.github.io",
     img: "viktorkorolyuk.github.io.png"
 }, {
@@ -34,12 +34,12 @@ setGallery([{
     img: "SWipe-game.png"
 }, {
     name: "jstoolbox",
-    desc: "Tools to optimise your chromebook usage",
+    desc: "Tools to optimise your chromebook usage.",
     url: "https://viktorkorolyuk.github.io/jstoolbox/",
     img: "jstoolbox.png"
 },{
   name:"SVG skull",
-  desc: "Polyart skull recreated using SVG",
+  desc: "Polyart skull recreated using SVG.",
   url:"https://codepen.io/ViktorKorolyuk/full/EmMrVb/",
   img:"svgSkull.png"
 }]);
@@ -53,7 +53,7 @@ function loadGallery() {
     for (i in pages) {
       x = (x == "left") ? "right" : "left";
         //Set the the content
-        str += `<div class="gallery" style="background-image:url('res/gallery/${pages[i].img}'); float: ${x};" onclick="window.location.href='${pages[i].url}'">
+        str += `<div class="gallery" style="background-image:url('res/gallery/${pages[i].img}'); float: ${z};" onclick="window.location.href='${pages[i].url}'">
         <p onmouseover="this.innerHTML = '${pages[i].desc}'" onmouseout="this.innerHTML = '${pages[i].name}'">${pages[i].name}</p>
     </div>`;
 
