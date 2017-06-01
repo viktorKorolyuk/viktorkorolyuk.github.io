@@ -1,3 +1,2 @@
-# My main website... for now #
-Who knows when I will find an alternative way to host static websites...
-<br>It's all a big mystery
+# My Website
+The website is designed to both be and present my programming portfolio to the world.
