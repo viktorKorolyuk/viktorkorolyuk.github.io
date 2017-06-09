@@ -1,2 +1,2 @@
 # My Website
-The website is designed to both be and present my programming portfolio to the world.
+Oh... hello, I see you have stumbled upon my main `github pages` repository. Sorry 'bout the mess, I wasn't expecting anyone. Gimmie a moment.... Okay.. nowit looks half decent.
