@@ -1,8 +1,9 @@
 /* Now its time for the "fun" part
- * In the following code we will make a system that simplifies debugging and
- * adding features later on.
+ * In the following code we will make a system that simplifies
+ * debugging and adding features later on.
  *
- *I am using a custom page handler to organize the code as much as possible.
+ *I am using a custom page handler to organize the code as much as
+ * possible.
  */
 
 
@@ -14,11 +15,10 @@ setPossibilities({
 }
 </style>`,
     about: function () {
-      console.log(document.body.innerHTML);
       return document.getElementById("about-template").innerHTML;
     },
     gallery: function () {
-        return "<h1>My projects</h1>" + loadGallery();
+        return "<h1>My projects</h1> <div class=''>" + loadGallery() + "</div>";
     }
 });
 
