@@ -42,6 +42,11 @@ setGallery([{
   desc: "Polyart skull recreated using SVG.",
   url:"https://codepen.io/ViktorKorolyuk/full/EmMrVb/",
   img:"svgSkull.png"
+}, {
+  name:"ReactJS Switch",
+  desc:"Boolean switch with nice CSS animations and event hanlder.",
+  url:"https://codepen.io/ViktorKorolyuk/full/dzGzVw/",
+  img:"reactJsSwitch.png"
 }]);
 
 /* Gallery */

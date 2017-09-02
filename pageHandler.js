@@ -19,8 +19,7 @@ function pageHandler() {
 
 //global subroutines for setup. This can be integrated into the pageHandler object later on.
 function setPage(location, id) {
-//    console.log(location);
-    //return if same page loaded
+    // return if same page loaded
     if (document.getElementById("main").innerHTML === `${location} ${pgHandler.possibilities.before}`) return;
     document.getElementById("main").innerHTML = `${location} ${pgHandler.possibilities.before}`;
     window.location.hash = id;
