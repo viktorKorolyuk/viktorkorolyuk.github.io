@@ -10,7 +10,7 @@
 setPossibilities({
     before: `<style>
 #main *{
-   animation: fadein 2s; /* Why not add some effects? */
+   animation: fadein 1.5s ease-in; /* Why not add some effects? */
    opacity: 1;
 }
 </style>`,
