@@ -15,15 +15,15 @@ setPossibilities({
 }
 </style>`,
     about: function () {
-      return document.getElementById("about-template").innerHTML;
+        return document.getElementById("about-template").innerHTML;
     },
     gallery: function () {
-        return "<h1>My projects</h1> <div class=''>" + loadGallery() + "</div>";
+        return "<h1 style='text-align: center;'>My projects</h1> <div class='gallery'>" + loadGallery() + "</div>";
     }
 });
 
 setGallery([{
-    name: "viktorkorolyuk.github.io",
+    name: "The site.",
     desc: "The current website.",
     url: "https://viktorkorolyuk.github.io",
     img: "viktorkorolyuk.github.io.png"
@@ -37,16 +37,16 @@ setGallery([{
     desc: "Tools to optimise your chromebook usage.",
     url: "https://viktorkorolyuk.github.io/jstoolbox/",
     img: "jstoolbox.png"
-},{
-  name:"SVG skull",
-  desc: "Polyart skull recreated using SVG.",
-  url:"https://codepen.io/ViktorKorolyuk/full/EmMrVb/",
-  img:"svgSkull.png"
 }, {
-  name:"ReactJS Switch",
-  desc:"Boolean switch with nice CSS animations and event hanlder.",
-  url:"https://codepen.io/ViktorKorolyuk/full/dzGzVw/",
-  img:"reactJsSwitch.png"
+    name: "SVG skull",
+    desc: "Polyart skull recreated using SVG.",
+    url: "https://codepen.io/ViktorKorolyuk/full/EmMrVb/",
+    img: "svgSkull.png"
+}, {
+    name: "ReactJS Switch",
+    desc: "Boolean switch with nice CSS animations and event hanlder.",
+    url: "https://codepen.io/ViktorKorolyuk/full/dzGzVw/",
+    img: "reactJsSwitch.png"
 }]);
 
 /* Gallery */
@@ -56,11 +56,17 @@ function loadGallery() {
     let pages = pgHandler.gallery;
     var x, z = "none";
     for (i in pages) {
-      x = (x == "left") ? "right" : "left";
+        console.log(i)
         //Set the the content
-        str += `<div class="gallery" style="background-image:url('res/gallery/${pages[i].img}'); float: ${z};" onclick="window.location.href='${pages[i].url}'">
-        <p onmouseover="this.innerHTML = '${pages[i].desc}'" onmouseout="this.innerHTML = '${pages[i].name}'">${pages[i].name}</p>
-    </div>`;
+        str += `<div class='project'>
+                    <div class='st'>
+                        <img onclick="window.location.href='${pages[i].url}'" src='res/gallery/${pages[i].img}' />
+                    </div>
+                    <div class='content'>
+                        <h1>${pages[i].name}</h1>
+                        <p>${pages[i].desc}</p>
+                    </div>
+                </div>`;
 
     }
     return str;
