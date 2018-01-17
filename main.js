@@ -7,7 +7,37 @@
  */
 
 
-setPossibilities({
+/** class to make page handling easier */
+const pgHandler = new PageHandler();
+
+/**
+ * @description Generates a gallery to be added when required.
+ * @arguments none
+ */
+
+function loadGallery() {
+    let str = "";
+    let pages = pgHandler.gallery;
+    var x, z = "none";
+    for (i of pages) {
+
+        //Set the the content
+        str += `<div class='project'>
+                    <div class='st'>
+                        <img onclick="window.location.href='${i.url}'" src='res/gallery/${i.img}' />
+                    </div>
+                    <div class='content'>
+                        <h1>${i.name}</h1>
+                        <p>${i.desc}</p>
+                    </div>
+                </div>`;
+
+    }
+    return str;
+}
+
+
+pgHandler.options = {
     before: `<style>
 #main *{
    animation: fadein 1.5s ease-in; /* Why not add some effects? */
@@ -20,9 +50,9 @@ setPossibilities({
     gallery: function () {
         return "<h1 style='text-align: center;'>My projects</h1> <div class='gallery'>" + loadGallery() + "</div>";
     }
-});
+};
 
-setGallery([{
+pgHandler.gallery = [{
     name: "The site.",
     desc: "The current website.",
     url: "https://viktorkorolyuk.github.io",
@@ -47,29 +77,7 @@ setGallery([{
     desc: "Boolean switch with nice CSS animations and event hanlder.",
     url: "https://codepen.io/ViktorKorolyuk/full/dzGzVw/",
     img: "reactJsSwitch.png"
-}]);
+}];
 
-/* Gallery */
-function loadGallery() {
-    let main = document.getElementById("main");
-    let str = "";
-    let pages = pgHandler.gallery;
-    var x, z = "none";
-    for (i in pages) {
-        console.log(i)
-        //Set the the content
-        str += `<div class='project'>
-                    <div class='st'>
-                        <img onclick="window.location.href='${pages[i].url}'" src='res/gallery/${pages[i].img}' />
-                    </div>
-                    <div class='content'>
-                        <h1>${pages[i].name}</h1>
-                        <p>${pages[i].desc}</p>
-                    </div>
-                </div>`;
-
-    }
-    return str;
-}
-
-pgHandler.init(); //start
+// Tell the pagehandler to process the given options
+pgHandler.init();

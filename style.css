@@ -8,11 +8,14 @@
 }
 
 * {
+  --content_text_colour: #111;
   box-sizing: border-box;
+  font-weight: normal;
 }
 
 body {
-  background: #fff;
+  background: #222;
+  color: white;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
@@ -26,7 +29,6 @@ body {
 }
 
 .title {
-  color: #eee;
   text-align: center;
   /* Making sure that people do not accidentaly select the nav bar */
   -webkit-touch-callout: none;
@@ -41,36 +43,36 @@ body {
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently supported by Chrome and Opera */
+  background: #eee;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
-  background: #222;
 }
 
 .logo,
 .button {
-  padding: 2em;
   margin: 0;
 }
 
 .logo {
-  font-size: 4em;
-  background: #222;
-  color: white;
+  padding: 2em;
   font-weight: normal;
   text-align: center;
+  font-size: 4em;
+  color: #111;
 }
 
 .button {
-  margin: 0;
   display: inline-block;
-  background: #333;
-  text-align: center;
-  font-size: 2.5vh;
-  color: #eee;
+  margin: 0;
+  padding: 1em;
   width: 100%;
+  text-align: center;
+  font-size: 2em;
+  color: #eee;
+  background: #333;
   transition: background .5s ease-in;
 }
 
@@ -81,8 +83,8 @@ body {
 
 #main {
   margin-top: 5vh;
-  color: #222;
   font-size: 1.5em;
+
   text-align: center;
 }
 
@@ -91,27 +93,24 @@ body {
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  /* flex-flow: row; */
-  justify-content: center;
+  --gap: 1em;
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - var(--gap)/2));
+  grid-gap: var(--gap);
 }
 
 .project {
-  display: block;
-  box-sizing: border-box;
+  width: 100%;
+  padding-top: 1em;
+
+  color: var(--content_text_colour);
   background: white;
-  width: 30%;
-  /* height: 40vw; */
-  color: #333;
-  box-shadow: 0px 5px 5px gray;
-  margin: 0.5em;
   overflow: hidden;
 }
 
 .st {
   background: #fff;
-  width: 100%;
   height: 40%;
   border-bottom: 1px solid #aaa;
 }
