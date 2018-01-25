@@ -22,13 +22,13 @@ function loadGallery() {
     for (i of pages) {
 
         //Set the the content
-        str += `<div class='project'>
+        str += `<div class='project' onclick="window.location.href='${i.url}'">
                     <div class='st'>
-                        <img onclick="window.location.href='${i.url}'" src='res/gallery/${i.img}' />
+                        <!-- <img onclick="window.location.href='${i.url}'" src='res/gallery/${i.img}' /> -->
                     </div>
                     <div class='content'>
-                        <h1>${i.name}</h1>
-                        <p>${i.desc}</p>
+                        <h1 class="name">${i.name}</h1>
+                        <p class="desc">${i.desc}</p>
                     </div>
                 </div>`;
 
@@ -53,11 +53,6 @@ pgHandler.options = {
 };
 
 pgHandler.gallery = [{
-    name: "The site.",
-    desc: "The current website.",
-    url: "https://viktorkorolyuk.github.io",
-    img: "viktorkorolyuk.github.io.png"
-}, {
     name: "SWipe",
     desc: "Are you fast enough?",
     url: "https://viktorkorolyuk.github.io/SWipe/",
@@ -74,9 +69,13 @@ pgHandler.gallery = [{
     img: "svgSkull.png"
 }, {
     name: "ReactJS Switch",
-    desc: "Boolean switch with nice CSS animations and event hanlder.",
+        desc: "Boolean switch with nice CSS animations and event hanlder.",
     url: "https://codepen.io/ViktorKorolyuk/full/dzGzVw/",
     img: "reactJsSwitch.png"
+}, {
+    name:"Codepen.io",
+    desc:"A link to my codepen.io 'portfolio'",
+    url: "https://codepen.io/ViktorKorolyuk/"
 }];
 
 // Tell the pagehandler to process the given options
