@@ -1,10 +1,9 @@
-
 /**
  * @description Chooses which pages to show when the navigation buttons are pressed.
  */
-class PageHandler{
+class PageHandler {
 
-    constructor(){
+    constructor() {
         this._gallery = [];
         this.possibilities = [];
     }
@@ -12,7 +11,7 @@ class PageHandler{
     /**
      * @description Set up the on-click listeners for the navigation buttons.
      */
-    init(){
+    init() {
         let buttons = document.getElementsByClassName("button");
 
         for (var i = 0; i < buttons.length; i++) {
@@ -22,7 +21,10 @@ class PageHandler{
             });
         }
         // Runs every page reload
-        if (window.location.hash != "") this.setPage(this.possibilities[window.location.hash.split("#")[1]](), window.location.hash.split("#")[1]);
+        if (window.location.hash != "") {
+            let option = window.location.hash.split("#")[1].replace("_", "");
+            this.setPage(this.possibilities[option](), option);
+        }
     }
 
     /**
@@ -30,23 +32,27 @@ class PageHandler{
      * @param {*} location
      * @param {*} id 
      */
-    setPage(location, id){
+
+    setPage(location, id) {
         // Return if same page loaded
         if (document.getElementById("main").innerHTML === `${location} ${pgHandler.possibilities.before}`) return;
         document.getElementById("main").innerHTML = `${location} ${pgHandler.possibilities.before}`;
-        window.location.hash = id;
+        window.location.hash = "_" + id;
     }
 
 
-    set gallery(e){
+    set gallery(e) {
         this._gallery = e;
     }
 
-    get gallery(){
+    get gallery() {
         return this._gallery;
     }
-
-    set options(e){
+    /**
+     * @description Set the pages.
+     * @param {e} Object with anonymous function declarations.
+     */
+    set options(e) {
         this.possibilities = e;
     }
 }

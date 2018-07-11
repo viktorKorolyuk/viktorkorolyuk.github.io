@@ -1,11 +1,11 @@
-/* Now its time for the "fun" part
+/*
+ * Now its time for the "fun" part
  * In the following code we will make a system that simplifies
  * debugging and adding features later on.
  *
- *I am using a custom page handler to organize the code as much as
+ * I am using a custom page handler to organize the code as much as
  * possible.
  */
-
 
 /** class to make page handling easier */
 const pgHandler = new PageHandler();
@@ -21,7 +21,7 @@ function loadGallery() {
     var x, z = "none";
     for (i of pages) {
 
-        //Set the the content
+        // Set the the content
         str += `<div class='project' onclick="window.location.href='${i.url}'">
                     <div class='st'>
                         <!-- <img onclick="window.location.href='${i.url}'" src='res/gallery/${i.img}' /> -->
@@ -69,12 +69,12 @@ pgHandler.gallery = [{
     img: "svgSkull.png"
 }, {
     name: "ReactJS Switch",
-        desc: "Boolean switch with nice CSS animations and event hanlder.",
+    desc: "Boolean switch with nice CSS animations and event hanlder.",
     url: "https://codepen.io/ViktorKorolyuk/full/dzGzVw/",
     img: "reactJsSwitch.png"
 }, {
-    name:"Codepen.io",
-    desc:"A link to my codepen.io 'portfolio'",
+    name: "Codepen.io",
+    desc: "A link to my codepen.io 'portfolio'",
     url: "https://codepen.io/ViktorKorolyuk/"
 }];
 

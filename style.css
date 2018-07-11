@@ -8,15 +8,21 @@
 }
 
 * {
-  --colour_background: #222;
+  --colour_background_main: #222;
   --content_text_colour: #111;
-  --colour_title_background:#eee;
+  --colour_title_background: #eee;
+
+  --button_background: #eee;
+  --button_colour:#333;
+  --button_background_hover:#333;
+  --button_colour_hover: #fff;
+
   box-sizing: border-box;
   font-weight: normal;
 }
 
 body {
-  background: var(--colour_background);
+  background: var(--colour_background_main);
   color: white;
   font-family: sans-serif;
   margin: 0;
@@ -73,14 +79,14 @@ body {
   padding: 1em;
   width: 100%;
   text-align: center;
-  color: #eee;
-  background: #333;
+  color: var(--button_colour);
+  background: var(--button_background);
   transition: background .5s ease-in;
 }
 
 .button:hover {
-  background: #222;
-  color: white;
+  background: var(--button_background_hover);
+  color: var(--button_colour_hover);
 }
 
 #main {
@@ -111,7 +117,6 @@ body {
   background: var(--colour_title_background);
   overflow: hidden;
 }
-
 
 /* Disabled. */
 
