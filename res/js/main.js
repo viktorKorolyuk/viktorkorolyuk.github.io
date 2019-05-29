@@ -40,7 +40,7 @@ function loadGallery() {
 pgHandler.options = {
     before: `<style>
 #main *{
-   animation: fadein 1.5s ease-in; /* Why not add some effects? */
+   animation: fadein 0.5s ease-in; /* Why not add some effects? */
    opacity: 1;
 }
 </style>`,
@@ -53,6 +53,10 @@ pgHandler.options = {
 };
 
 pgHandler.gallery = [{
+    name: "Codepen.io",
+    desc: "A link to my codepen.io 'portfolio'",
+    url: "https://codepen.io/ViktorKorolyuk/"
+},{
     name: "SWipe",
     desc: "Are you fast enough?",
     url: "https://viktorkorolyuk.github.io/SWipe/",
@@ -63,6 +67,10 @@ pgHandler.gallery = [{
     url: "https://viktorkorolyuk.github.io/jstoolbox/",
     img: "jstoolbox.png"
 }, {
+    name: "Draggyman",
+    desc: "(ANDROID) Drag a sprite around the screen avoiding flying spikes",
+    url: "https://github.com/viktorKorolyuk/DraggyMan"
+}, {
     name: "SVG skull",
     desc: "Polyart skull recreated using SVG.",
     url: "https://codepen.io/ViktorKorolyuk/full/EmMrVb/",
@@ -72,11 +80,7 @@ pgHandler.gallery = [{
     desc: "Boolean switch with nice CSS animations and event hanlder.",
     url: "https://codepen.io/ViktorKorolyuk/full/dzGzVw/",
     img: "reactJsSwitch.png"
-}, {
-    name: "Codepen.io",
-    desc: "A link to my codepen.io 'portfolio'",
-    url: "https://codepen.io/ViktorKorolyuk/"
-}];
+}, ];
 
 // Tell the pagehandler to process the given options
 pgHandler.init();
