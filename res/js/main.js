@@ -82,5 +82,5 @@ pgHandler.gallery = [{
     img: "reactJsSwitch.png"
 }, ];
 
-// Tell the pagehandler to process the given options
+// Call the pagehandler to process the given options
 pgHandler.init();
