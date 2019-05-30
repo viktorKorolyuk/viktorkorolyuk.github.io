@@ -124,7 +124,7 @@ body {
   color: var(--content_text_colour);
   background: var(--colour_header_background_foreground);
   overflow: hidden;
-  transition: background .25s, color .25s;
+  transition: background .35s, color .35s;
 }
 
 .project:hover {
