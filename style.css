@@ -24,6 +24,7 @@
   --button_colour: #333;
   --button_background_hover: #333;
   --button_colour_hover: #fff;
+  --colour_background_project_hover:#2373f3;
   box-sizing: border-box;
   font-weight: normal;
 }
@@ -127,7 +128,7 @@ body {
 }
 
 .project:hover {
-  background: #329df4;
+  background: var(--colour_background_project_hover);
   color: #fff;
 }
 
