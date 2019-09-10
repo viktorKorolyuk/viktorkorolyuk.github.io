@@ -1,0 +1,13 @@
+.animatableText{
+  font-size: 2em;
+  display: inline-block;
+  min-width: 1em;
+  min-height: 1em;
+
+  text-align: center;
+  padding: 0.5em;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: rotateX(-180deg);
+  perspective: 1000px;
+}
