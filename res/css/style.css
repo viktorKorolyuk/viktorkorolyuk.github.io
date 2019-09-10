@@ -1,32 +1,4 @@
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeout {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
 * {
-  --colour_background_main: #222;
-  --colour_header_background_foreground: #eee;
-  --content_text_colour: #111;
-  --button_background: #eee;
-  --button_colour: #333;
-  --button_background_hover: #333;
-  --button_colour_hover: #fff;
-  --colour_background_project_hover: #2373f3;
   box-sizing: border-box;
   font-weight: normal;
 }
