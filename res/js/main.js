@@ -57,6 +57,10 @@ pgHandler.gallery = [{
     desc:"Spawns a random set of moving points on the screen and connects them with lines.",
     url:"https://codepen.io/ViktorKorolyuk/full/QWLmWPm"
 },{
+    name:"Conway's Game of Life",
+    desc:"A colourful implementation of the popular cellular automaton by John Horton Conway",
+    url:"https://codepen.io/ViktorKorolyuk/full/dJZPGK"
+},{
     name:"JS data-structs",
     desc:"A set of simple data structures which parse into JSON",
     url:"https://github.com/viktorKorolyuk/JS-Data-Structures"
