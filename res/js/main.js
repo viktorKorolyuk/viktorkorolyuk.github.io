@@ -54,7 +54,7 @@ pgHandler.options = {
 
 pgHandler.gallery = [{
     name:"Animated point mesh",
-    desc:"Spawns a random set of moving points on the screen and connects them with lines.",
+    desc:"Spawns a random set of moving points on the screen and connects them with lines",
     url:"https://codepen.io/ViktorKorolyuk/full/QWLmWPm"
 },{
     name:"Conway's Game of Life",
@@ -93,12 +93,12 @@ pgHandler.gallery = [{
     url: "https://github.com/viktorKorolyuk/DraggyMan"
 }, {
     name: "SVG skull",
-    desc: "Polyart skull recreated using SVG.",
+    desc: "Polyart skull recreated using SVG",
     url: "https://codepen.io/ViktorKorolyuk/full/EmMrVb/",
     img: "svgSkull.png"
 }, {
     name: "ReactJS Switch",
-    desc: "Boolean switch with nice CSS animations and event hanlder.",
+    desc: "Boolean switch with nice CSS animations and event hanlder",
     url: "https://codepen.io/ViktorKorolyuk/full/dzGzVw/",
     img: "reactJsSwitch.png"
 }, ];
