@@ -53,6 +53,10 @@ pgHandler.options = {
 };
 
 pgHandler.gallery = [{
+    name:"Animated point mesh",
+    desc:"Spawns a random set of moving points on the screen and connects them with lines.",
+    url:"https://codepen.io/ViktorKorolyuk/full/QWLmWPm"
+},{
     name:"JS data-structs",
     desc:"A set of simple data structures which parse into JSON",
     url:"https://github.com/viktorKorolyuk/JS-Data-Structures"
