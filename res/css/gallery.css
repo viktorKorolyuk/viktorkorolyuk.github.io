@@ -21,7 +21,7 @@
   background: var(--colour_header_background_foreground);
 
   overflow: hidden;
-  transition: background 0.7s ease-in, color .4s ease-in;
+  transition: background 0.7s, color .4s ease-in;
 }
 
 .project:hover {
