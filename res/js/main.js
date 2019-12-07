@@ -79,10 +79,6 @@ pgHandler.gallery = [{
     url: "https://viktorkorolyuk.github.io/SWipe/",
     img: "SWipe-game.png"
 }, {
-    name: "Codepen.io",
-    desc: "A link to my codepen.io 'portfolio'",
-    url: "https://codepen.io/ViktorKorolyuk/"
-}, {
     name: "jstoolbox",
     desc: "Tools to optimise your chromebook usage.",
     url: "https://viktorkorolyuk.github.io/jstoolbox/",
