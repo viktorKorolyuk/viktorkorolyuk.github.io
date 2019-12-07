@@ -1,13 +1,3 @@
-/*
- * Now its time for the "fun" part
- * In the following code we will make a system that simplifies
- * debugging and adding features later on.
- *
- * I am using a custom page handler to organize the code as much as
- * possible.
- */
-
-/** class to make page handling easier */
 const pgHandler = new PageHandler();
 
 /**
