@@ -53,6 +53,10 @@ pgHandler.options = {
 };
 
 pgHandler.gallery = [{
+    name:"Button ripple effect",
+    desc:"A neat effect to add to button designs",
+    url:"https://codepen.io/ViktorKorolyuk/full/GYGwpv"
+},{
     name: "Animated point mesh",
     desc: "Spawns a random set of moving points on the screen and connects them with lines",
     url: "https://codepen.io/ViktorKorolyuk/full/QWLmWPm"
@@ -72,7 +76,6 @@ pgHandler.gallery = [{
     name: "Not-Latex",
     "desc": "A latex-inspired javascript text processor",
     url: "https://github.com/viktorKorolyuk/Not-Latex"
-
 }, {
     name: "SWipe",
     desc: "Are you fast enough?",
