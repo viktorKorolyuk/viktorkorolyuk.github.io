@@ -62,7 +62,7 @@ body {
   text-align: center;
   color: var(--button_colour);
   background: var(--button_background);
-  transition: background 0.7s;
+  transition: background 0.3s;
 }
 
 .button:hover {

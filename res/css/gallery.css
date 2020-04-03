@@ -1,10 +1,8 @@
 .gallery {
   --gap: 0em;
   display: grid;
-  padding:1em;
-
+  padding: 1em;
   grid-template-columns: repeat(2, 40vw);
-  grid-row: 40vw;
   grid-gap: var(--gap);
   justify-content: center;
 }
@@ -21,7 +19,7 @@
   background: var(--colour_header_background_foreground);
 
   overflow: hidden;
-  transition: background 0.7s, color .4s ease-in;
+  transition: background 0.1s ease-out, color .1s ease-in;
 }
 
 .project:hover {
