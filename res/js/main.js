@@ -43,6 +43,10 @@ pgHandler.options = {
 };
 
 pgHandler.gallery = [{
+    name:"CSS Single element waves",
+    desc:"A peaceful and minimalistic wave animation",
+    url:"https://codepen.io/ViktorKorolyuk/full/JjdwZXm"
+},{
     name:"Button ripple effect",
     desc:"A neat effect to add to button designs",
     url:"https://codepen.io/ViktorKorolyuk/full/GYGwpv"
