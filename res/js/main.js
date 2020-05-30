@@ -43,14 +43,18 @@ pgHandler.options = {
 };
 
 pgHandler.gallery = [{
-    name:"CSS Single element waves",
-    desc:"A peaceful and minimalistic wave animation",
-    url:"https://codepen.io/ViktorKorolyuk/full/JjdwZXm"
-},{
-    name:"Button ripple effect",
-    desc:"A neat effect to add to button designs",
-    url:"https://codepen.io/ViktorKorolyuk/full/GYGwpv"
-},{
+    name: "SVG Facial Reconstruction Animation",
+    desc: "An infinitely looping animation of a face recognised only by it's fundemental features",
+    url: "https://codepen.io/ViktorKorolyuk/full/gOaymPZ"
+}, {
+    name: "CSS Single element waves",
+    desc: "A peaceful and minimalistic wave animation",
+    url: "https://codepen.io/ViktorKorolyuk/full/JjdwZXm"
+}, {
+    name: "Button ripple effect",
+    desc: "A neat effect to add to button designs",
+    url: "https://codepen.io/ViktorKorolyuk/full/GYGwpv"
+}, {
     name: "Animated point mesh",
     desc: "Spawns a random set of moving points on the screen and connects them with lines",
     url: "https://codepen.io/ViktorKorolyuk/full/QWLmWPm"
@@ -59,7 +63,7 @@ pgHandler.gallery = [{
     desc: "A colourful implementation of the popular cellular automaton by John Horton Conway",
     url: "https://codepen.io/ViktorKorolyuk/full/dJZPGK"
 }, {
-    name: "JS data-structs",
+    name: "JS Data-Structs",
     desc: "A set of simple data structures which parse into JSON",
     url: "https://github.com/viktorKorolyuk/JS-Data-Structures"
 }, {
@@ -85,7 +89,7 @@ pgHandler.gallery = [{
     desc: "(ANDROID) Drag a sprite around the screen avoiding flying spikes",
     url: "https://github.com/viktorKorolyuk/DraggyMan"
 }, {
-    name: "SVG skull",
+    name: "SVG Skull",
     desc: "Polyart skull recreated using SVG",
     url: "https://codepen.io/ViktorKorolyuk/full/EmMrVb/",
     img: "svgSkull.png"
