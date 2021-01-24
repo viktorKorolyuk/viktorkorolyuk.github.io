@@ -6,6 +6,7 @@ class PageHandler {
     constructor() {
         this._gallery = [];
         this.possibilities = [];
+        this.selected = undefined;
     }
 
     /**
@@ -18,6 +19,9 @@ class PageHandler {
             buttons[i].addEventListener("click", e => {
                 // Set the divider by id tag "main" to a set html code defined in possibilities
                 this.setPage(pgHandler.possibilities[e.target.target](), e.target.target);
+                if(this.selected != undefined) this.selected.classList.remove("selected")
+                this.selected = e.target
+                this.selected.classList.add("selected")
             });
         }
         // Runs every page reload
