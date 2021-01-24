@@ -51,7 +51,7 @@ pgHandler.options = {
 pgHandler.gallery = [{
     name: "SVG Facial Reconstruction Animation",
     desc: "An infinitely looping animation of a face recognised only by it's fundemental features",
-    imgURL: "skull-EXTRACT-333.png",
+    // imgURL: "skull-EXTRACT-333.png",
     url: "https://codepen.io/ViktorKorolyuk/full/gOaymPZ"
 }, {
     name: "CSS Single element waves",
@@ -93,7 +93,7 @@ pgHandler.gallery = [{
     name: "jstoolbox",
     desc: "Tools to optimise your chromebook usage.",
     url: "https://viktorkorolyuk.github.io/jstoolbox/",
-    img: "gallery/jstoolbox.png"
+    imgURL: "gallery/jstoolbox.png"
 }, {
     name: "Draggyman",
     desc: "(ANDROID) Drag a sprite around the screen avoiding flying spikes",
@@ -102,7 +102,7 @@ pgHandler.gallery = [{
     name: "SVG Skull",
     desc: "Polyart skull recreated using SVG",
     url: "https://codepen.io/ViktorKorolyuk/full/EmMrVb/",
-    imgURL: "gallery/svgSkull.png"
+    imgURL: "skull-EXTRACT-333.png"
 }, {
     name: "ReactJS Switch",
     desc: "Boolean switch with nice CSS animations and event hanlder",
