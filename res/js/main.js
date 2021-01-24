@@ -2,26 +2,32 @@ const pgHandler = new PageHandler();
 
 /**
  * @description Generates a gallery to be added when required.
- * @arguments none
  */
-
 function loadGallery() {
     let str = "";
     let pages = pgHandler.gallery;
-    var x, z = "none";
+
     for (i of pages) {
 
-        // Set the the content
-        str += `<div class='project' onclick="window.location.href='${i.url}'">
+        // If the image URL is empty, don't render it
+        if (i.imgURL) {
+            str += `<div class='project'>
                     <div class='st'>
-                        <!-- <img onclick="window.location.href='${i.url}'" src='res/gallery/${i.img}' /> -->
+                        <img onclick="window.location.href='${i.url}'" src='res/imgs/${i.imgURL}' />
                     </div>
                     <div class='content'>
                         <h1 class="name">${i.name}</h1>
                         <p class="desc">${i.desc}</p>
                     </div>
                 </div>`;
-
+        } else {
+            str += `<div class='project hov-pointer' onclick="window.location.href='${i.url}'">
+                    <div class='content'>
+                        <h1 class="name">${i.name}</h1>
+                        <p class="desc">${i.desc}</p>
+                    </div>
+                </div>`;
+        }
     }
     return str;
 }
@@ -38,25 +44,29 @@ pgHandler.options = {
         return document.getElementById("about-template").innerHTML;
     },
     gallery: function () {
-        return "<h1 style='text-align: center;'>My projects</h1> <div class='gallery'>" + loadGallery() + "</div>";
+        return "<div class='gallery'>" + loadGallery() + "</div>";
     }
 };
 
 pgHandler.gallery = [{
     name: "SVG Facial Reconstruction Animation",
     desc: "An infinitely looping animation of a face recognised only by it's fundemental features",
+    imgURL: "skull-EXTRACT-333.png",
     url: "https://codepen.io/ViktorKorolyuk/full/gOaymPZ"
 }, {
     name: "CSS Single element waves",
     desc: "A peaceful and minimalistic wave animation",
+    imgURL: "gallery/singleElementWaves.png",
     url: "https://codepen.io/ViktorKorolyuk/full/JjdwZXm"
 }, {
     name: "Button ripple effect",
     desc: "A neat effect to add to button designs",
+    imgURL: "gallery/buttonRippleEffect.png",
     url: "https://codepen.io/ViktorKorolyuk/full/GYGwpv"
 }, {
     name: "Animated point mesh",
     desc: "Spawns a random set of moving points on the screen and connects them with lines",
+    imgURL: "gallery/animatedPointMesh.png",
     url: "https://codepen.io/ViktorKorolyuk/full/QWLmWPm"
 }, {
     name: "Conway's Game of Life",
@@ -78,12 +88,12 @@ pgHandler.gallery = [{
     name: "SWipe",
     desc: "Are you fast enough?",
     url: "https://viktorkorolyuk.github.io/SWipe/",
-    img: "SWipe-game.png"
+    imgURL: "gallery/SWipe-game.png"
 }, {
     name: "jstoolbox",
     desc: "Tools to optimise your chromebook usage.",
     url: "https://viktorkorolyuk.github.io/jstoolbox/",
-    img: "jstoolbox.png"
+    img: "gallery/jstoolbox.png"
 }, {
     name: "Draggyman",
     desc: "(ANDROID) Drag a sprite around the screen avoiding flying spikes",
@@ -92,12 +102,12 @@ pgHandler.gallery = [{
     name: "SVG Skull",
     desc: "Polyart skull recreated using SVG",
     url: "https://codepen.io/ViktorKorolyuk/full/EmMrVb/",
-    img: "svgSkull.png"
+    imgURL: "gallery/svgSkull.png"
 }, {
     name: "ReactJS Switch",
     desc: "Boolean switch with nice CSS animations and event hanlder",
     url: "https://codepen.io/ViktorKorolyuk/full/dzGzVw/",
-    img: "reactJsSwitch.png"
+    imgURL: "gallery/reactJsSwitch.png"
 }, ];
 
 // Call the pagehandler to process the given options
