@@ -15,13 +15,17 @@
 	<meta property="og:u">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script src="res/js/textAnimate.js" defer></script>
+	<!-- <script src="res/js/textAnimate.js" defer></script> -->
+
+	<script src="./res/js/pageHandler.js" defer></script>
+	<script src="./res/js/main.js" defer></script>
 </head>
 
 <body>
 	<img src="res/imgs/GitHub-Mark/PNG/GitHub-Mark-Light-120px-plus.png" class="github"
 		onclick="window.location.href = 'https://www.github.com/viktorkorolyuk/'" />
-	<div id="1" class="title">
+	<div class="title">
+		<!-- SVG Title -->
 		<div>
 			<!-- TODO: Simplify this logo to use HTML and SVG instead of an SVG block -->
 			<svg width="614" height="614" viewBox="0 0 614 614" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,17 +39,23 @@
 					fill="white" />
 			</svg>
 		</div>
-		<div class="menu">
-			<a class="button" id="gallery" target="gallery">Gallery</a>
-			<a class="button" id="about" target="about">About</a>
+
+		<!-- Navigation bar -->
+		<div>
+			<a class="navigation_button" id="gallery" target="gallery">Gallery</a>
+			<a class="navigation_button" id="about" target="about">About</a>
 		</div>
 	</div>
+
+	<!-- Primary content -->
 	<div id="main">
 		<noscript>
 			This website requires javascript to work.
 		</noscript>
 	</div>
 
+	<!-- TEMPLATES -->
+	
 	<!-- Template for ABOUT section -->
 	<template class="abouttemplate" id="about-template">
 		<img src="res/imgs/GitHub-Mark/PNG/GitHub-Mark-Light-120px-plus.png"
@@ -60,11 +70,7 @@
 			<p>As a software developer I have experience organising and developing projects for Frontend and Backend Web
 				stacks, which helps me build software and solutions that help others achieve their <b>goals.</b></p>
 		</div>
-
 	</template>
-
-	<script src="./res/js/pageHandler.js"></script>
-	<script src="./res/js/main.js"></script>
 </body>
 
 </html>

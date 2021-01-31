@@ -33,16 +33,12 @@ body {
   -ms-user-select: none;
   /* Internet Explorer/Edge */
   user-select: none;
-  /* Non-prefixed version, currently supported by Chrome and Opera */
+  
   background: var(--colour_header_background_foreground);
 }
 
-.menu {
-  /* display:flex; */
-}
-
 .logo,
-.button {
+.navigation_button {
   margin: 0;
 }
 
@@ -53,7 +49,7 @@ body {
   color: #111;
 }
 
-.button {
+.navigation_button {
   position: relative;
   display: inline-block;
   margin: 1em;
@@ -66,10 +62,8 @@ body {
   box-sizing: border-box;
 }
 
-.button::before {}
-
-.button:hover::after,
-.button.selected::after {
+.navigation_button:hover::after,
+.navigation_button.selected::after {
   position: absolute;
   display: block;
   content: '';
@@ -94,7 +88,7 @@ body {
     display: none;
   }
 
-  .button {
+  .navigation_button {
     color: white;
   }
 
