@@ -13,7 +13,7 @@ class PageHandler {
      * @description Set up the on-click listeners for the navigation buttons.
      */
     init() {
-        let buttons = document.getElementsByClassName("button");
+        let buttons = document.getElementsByClassName("navigation_button");
 
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].addEventListener("click", e => {
