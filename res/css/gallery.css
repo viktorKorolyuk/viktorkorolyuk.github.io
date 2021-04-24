@@ -5,7 +5,8 @@
   --img_height: 257px;
 
   display: grid;
-  padding: 1em;
+  padding: 1rem;
+  margin-top: 4rem;
   grid-template-columns: repeat(4, auto);
   gap: var(--gap);
 
@@ -63,8 +64,15 @@
 /********************************
  * Deals with mobile screen sizes
  ********************************/
+@media(max-width:1212px) {
 
-@media(max-width:800px) {
+  .gallery {
+    /* padding: 0; */
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media(max-width:930px) {
 
   .gallery {
     /* padding: 0; */
@@ -75,16 +83,15 @@
 @media(max-width:600px) {
 
   .logo {
-    font-size: 2em;
+    /* font-size: 2em; */
   }
 
   .gallery .project {
-    width: 100%;
+    /* width: calc(var(--img_width)/2); */
   }
 
   .gallery {
-    padding: 0;
-    grid-template-columns: 100%;
     font-size: 1em;
+    grid-template-columns: repeat(1, auto);
   }
 }
